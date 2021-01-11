@@ -58,24 +58,26 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define Map_Output_Pin 				GPIO_PIN_13
-#define Map_Output_GPIO_Port		GPIOC
-#define DRS_Switch_Pin 				GPIO_PIN_14
-#define DRS_Switch_GPIO_Port 		GPIOC
-#define Active_State_Pin 			GPIO_PIN_15
-#define Active_State_GPIO_Port 		GPIOC
-#define Up_Shift_Pin 				GPIO_PIN_2
-#define Up_Shift_GPIO_Port 			GPIOB
-#define Down_Shift_Pin 				GPIO_PIN_11
-#define Down_Shift_GPIO_Port 		GPIOB
-#define MS_Map_Pin 					GPIO_PIN_8
-#define MS_Map_GPIO_Port 			GPIOA
-#define Open_Wing_Pin 				GPIO_PIN_11
-#define Open_Wing_GPIO_Port 		GPIOA
-#define Close_Wing_Pin 				GPIO_PIN_12
-#define Close_Wing_GPIO_Port 		GPIOA
-#define DRS_Enable_Pin 				GPIO_PIN_7
-#define DRS_Enable_GPIO_Port 		GPIOB
+#define Map_Output_Pin GPIO_PIN_13
+#define Map_Output_GPIO_Port GPIOC
+#define DRS_Switch_Pin GPIO_PIN_14
+#define DRS_Switch_GPIO_Port GPIOC
+#define Active_State_Pin GPIO_PIN_15
+#define Active_State_GPIO_Port GPIOC
+#define Up_Shift_Pin GPIO_PIN_2
+#define Up_Shift_GPIO_Port GPIOB
+#define Lap_Reset_Pin GPIO_PIN_10
+#define Lap_Reset_GPIO_Port GPIOB
+#define Down_Shift_Pin GPIO_PIN_11
+#define Down_Shift_GPIO_Port GPIOB
+#define MS_Map_Pin GPIO_PIN_8
+#define MS_Map_GPIO_Port GPIOA
+#define Open_Wing_Pin GPIO_PIN_11
+#define Open_Wing_GPIO_Port GPIOA
+#define Close_Wing_Pin GPIO_PIN_12
+#define Close_Wing_GPIO_Port GPIOA
+#define DRS_Enable_Pin GPIO_PIN_7
+#define DRS_Enable_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

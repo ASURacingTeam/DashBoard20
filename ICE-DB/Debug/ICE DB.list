@@ -21,23 +21,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   8 .ARM.attributes 00000029  00000000  00000000  00020080  2**0
                   CONTENTS, READONLY
-  9 .debug_info   0001360e  00000000  00000000  000200a9  2**0
+  9 .debug_info   0001360b  00000000  00000000  000200a9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_abbrev 000024dc  00000000  00000000  000336b7  2**0
+ 10 .debug_abbrev 000024dc  00000000  00000000  000336b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    0000a84e  00000000  00000000  00035b93  2**0
+ 11 .debug_loc    0000a84e  00000000  00000000  00035b90  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 00000ac0  00000000  00000000  000403e8  2**3
+ 12 .debug_aranges 00000ac0  00000000  00000000  000403e0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 00001388  00000000  00000000  00040ea8  2**3
+ 13 .debug_ranges 00001388  00000000  00000000  00040ea0  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_line   00005662  00000000  00000000  00042230  2**0
+ 14 .debug_line   000055f0  00000000  00000000  00042228  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00003cae  00000000  00000000  00047892  2**0
+ 15 .debug_str    00003cab  00000000  00000000  00047818  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      0000007c  00000000  00000000  0004b540  2**0
+ 16 .comment      0000007c  00000000  00000000  0004b4c3  2**0
                   CONTENTS, READONLY
- 17 .debug_frame  00002ac0  00000000  00000000  0004b5bc  2**2
+ 17 .debug_frame  00002ac0  00000000  00000000  0004b540  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -3992,15 +3992,15 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
  8001d34:	f7fe ff3c 	bl	8000bb0 <HAL_GPIO_Init>
 
-  /*Configure GPIO pins : Up_Shift_Pin Down_Shift_Pin DRS_Enable_Pin */
-  GPIO_InitStruct.Pin = Up_Shift_Pin|Down_Shift_Pin|DRS_Enable_Pin;
- 8001d38:	f640 0384 	movw	r3, #2180	; 0x884
+  /*Configure GPIO pins : Up_Shift_Pin Lap_Reset_Pin Down_Shift_Pin DRS_Enable_Pin */
+  GPIO_InitStruct.Pin = Up_Shift_Pin|Lap_Reset_Pin|Down_Shift_Pin|DRS_Enable_Pin;
+ 8001d38:	f640 4384 	movw	r3, #3204	; 0xc84
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
  8001d3c:	a908      	add	r1, sp, #32
  8001d3e:	4859      	ldr	r0, [pc, #356]	; (8001ea4 <main+0x258>)
-  GPIO_InitStruct.Pin = Up_Shift_Pin|Down_Shift_Pin|DRS_Enable_Pin;
+  GPIO_InitStruct.Pin = Up_Shift_Pin|Lap_Reset_Pin|Down_Shift_Pin|DRS_Enable_Pin;
  8001d40:	9308      	str	r3, [sp, #32]
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
  8001d42:	9409      	str	r4, [sp, #36]	; 0x24
